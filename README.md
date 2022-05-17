@@ -1,1 +1,1 @@
-# Projet7_OC
+# Projet7 OpenClassrooms : développez un algorithme de recherche en JavaScript
