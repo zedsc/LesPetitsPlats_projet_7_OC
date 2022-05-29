@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type ="text/css" href="scss/main.css">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <script src="https://kit.fontawesome.com/96c7615c9a.js" crossorigin="anonymous"></script>
+
+
+        <title>Recettes - Les petits plats</title>
+        <meta name="description" content="Site web de recettes de cuisine.">
+    </head>
+    <body>
+        <div class="main-wrapper">
+
+            <!-- Header -->
+            <header class="header">
+              <a href="#main" class="sr-only skip-link">Aller au contenu principal</a>
+              <img class="logo" src="https://user.oc-static.com/upload/2020/08/14/15973932905401_logo%20%281%29.png" alt="Logo Les petits plats"/>
+
+              <!-- Searchbar -->
+              <div class="research-section">
+                <div class="search-bar">
+                  <label class="search-bar__label sr-only" for="research">Rechercher une recette</label>
+                  <input 
+                    class="search-bar__input" type="search" id="research" name="research"  
+                    placeholder="Rechercher une recette"/>
+                    <div class="search-bar__icon">
+                      <span class="fa-solid fa-magnifying-glass"></span>
+                    </div>
+                </div>
+
+                <!-- Comboboxes -->
+                <div class="combobox">
+                  <div class="combobox__ingredient">
+                    <label class="combobox-label__ingredient" for="ingredient">Ingrédients</label>
+                    <input 
+                      class="search-ingredient" type="text" id="ingredient" name="ingredient" 
+                      list="ingredient-list" 
+                      placeholder="Rechercher un ingrédient"/>
+                      <svg class="sorter-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2"/>
+                      </svg>
+                    <datalist id="ingredient-list" class="datalist datalist__ingredient">
+                      <option value="oeuf"></option>
+                      <option value="sucre"></option>
+                    </datalist>
+                  </div>
+
+                  <div class="combobox__appliance">
+                    <label class="combobox-label__appliance" for="appliance">Appareils</label>
+                    <input 
+                      class="search-appliance" type="text" id="appliance" name="appliance" 
+                      list="appliance-list" 
+                      placeholder="Rechercher un appareil"/>
+                      <svg class="sorter-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2"/>
+                      </svg>
+                    <datalist id="appliance-list" class="datalist datalist__appliance">
+                      <option value="casserole"></option>
+                      <option value="four"></option>
+                    </datalist>
+                  </div>
+
+                  <div class="combobox__ustensil">
+                    <label class="combobox-label__ustensil" for="ustensil">Ustensiles</label>
+                    <input 
+                      class="search-ustensil" type="text" id="ustensil" name="ustensil" 
+                      list="ustensil-list" 
+                      placeholder="Rechercher un ustensile"/>
+                      <svg class="sorter-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2"/>
+                      </svg>
+                    <datalist id="ustensil-list" class="datalist datalist__ustensil">
+                      <option value="fouet"></option>
+                      <option value="saladier"></option>
+                    </datalist>
+                  </div>
+                </div>
+
+              </div>
+            </header>
+
+            <!-- Contenu principal -->
+            <main id="main">
+              <div class="no-match display-none">
+                <p class="no-match__txt">Aucune recette ne correspond à votre critère... Vous pouvez chercher
+                  « tarte aux pommes », « poisson », etc.
+                </p>
+              </div>
+              <div class="recipe-section" id="recipe-gallery">
+                
+
+              </div>
+
+            </main>  
+
+        </div>
+
+
+
+      <!-- API -->
+      <script src="/scripts/api/ApiRecipe.js"></script>
+
+      <!-- Models -->
+      <script src="/scripts/models/IngredientData.js"></script>
+      <script src="/scripts/models/RecipeData.js"></script>
+
+      <!-- Factories -->
+
+      <!-- Templates -->
+      <script src="/scripts/templates/IngredientCard.js"></script>
+      <script src="/scripts/templates/RecipeCard.js"></script>
+
+      <!-- Utils -->
+      <script src="/scripts/utils/searchBar.js"></script>
+
+      <!-- App -->
+      <script type="module" src="/scripts/appRecipe.js"></script>
+
+    </body>
+</html>
