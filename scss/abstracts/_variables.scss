@@ -1,0 +1,75 @@
+// BREAKPOINTS
+$breakpoints: (
+    x-small: 320px,
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    x-large: 1200px,
+    xx-large: 1400px,
+);
+
+// COLORS
+$color-primary: #e7e7e7;
+$color-secondary: #c7bebe;
+//$color-tertiary: ;
+//$color-quat: ;
+//$color-quint: ;
+
+
+
+// Variables niveaux de gris
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$white: #FFFFFF;
+$black: #0F0F0F;
+
+// FONTS
+// Font sizes
+$font-size: (
+  "10": 0.625rem,
+  "11": 0.6875rem,
+  "12": 0.75rem,
+  "14": 0.875rem,
+  "16": 1rem,
+  "18": 1.125rem,
+  "20": 1.25rem,
+  "24": 1.5rem,
+  "30": 1.875rem,
+  "32": 2rem,
+  "36": 2.25rem,
+  "48": 3rem,
+  "base": 1rem,
+);
+
+$font-size-html: 100%;
+$font-size-base: 1rem;
+
+// Graisses des Fonts
+$weight-light: 200;
+$weight-book: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+
+// Familles de fonts
+$font-family-base: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+$line-height-base: 1.5;
+
+// Links
+$link-decoration: none;
+$link-decoration-hover: none;
+
+// Border radius
+$radius-none: 0;
+$radius-small: 0.5rem;
+$radius-medium: 1rem;
+$radius-large: 20rem;
+$radius-circle: 50%;

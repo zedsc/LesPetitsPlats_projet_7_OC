@@ -1,0 +1,252 @@
+/*! From minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+/* 1. Remove the grey highlight on links in iOS 
+* 2. Prevent orientation font changes in iOS
+* 3. Breaks words to prevent overflow in all browsers
+*/
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  overflow-wrap: break-word;
+  /* 3 */
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 1. Switch to border-box model for all elements
+ * 2. Avoid min-width: auto on flex and grid items
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* 1 */
+  /*min-width: 0;*/
+  /* 2 */
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Links
+*/
+a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: #212529;
+  text-decoration: none;
+}
+
+.main-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.display-none {
+  display: none;
+}
+
+.combobox {
+  display: flex;
+}
+
+.search-bar__input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+}
+.search-bar__input:-moz-focusring {
+  outline: 1px solid #c7bebe;
+}
+.search-bar__icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+}
+
+.recipe-card {
+  width: 380px;
+  height: 364px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.recipe-container-img {
+  height: 50%;
+  width: 100%;
+  background-color: #c7bebe;
+}
+
+.recipe-content {
+  background-color: #e7e7e7;
+  min-height: 50%;
+  padding: 20px;
+  overflow: hidden;
+  height: 50%;
+}
+
+.recipe-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.recipe-heading__title {
+  max-width: 76%;
+}
+.recipe-heading__timer {
+  font-weight: bold;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  overflow: hidden;
+  height: 72%;
+}
+.recipe-info__ingredients {
+  width: 48%;
+}
+.recipe-info__description {
+  width: 48%;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.recipe-composant {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.2;
+  overflow: hidden;
+}
+.recipe-composant__ingredient {
+  font-weight: bold;
+}
+.recipe-composant__quantity {
+  margin-left: 3px;
+}
+.recipe-composant__unit {
+  margin-left: 2px;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.logo {
+  margin: 30px auto;
+  display: block;
+  width: 250px;
+}
+
+.research-section {
+  position: relative;
+}
+
+.recipe-section {
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+  -moz-column-gap: 3%;
+       column-gap: 3%;
+  row-gap: 45px;
+}
+
+.no-match {
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

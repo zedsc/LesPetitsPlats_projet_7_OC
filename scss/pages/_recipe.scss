@@ -1,0 +1,16 @@
+.recipe-section {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+    column-gap: 3%;
+    row-gap: 45px;
+}
+
+
+// No match found message
+.no-match {
+    text-align: center;
+}

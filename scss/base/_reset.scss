@@ -1,0 +1,123 @@
+/*! From minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+/* 1. Remove the grey highlight on links in iOS 
+* 2. Prevent orientation font changes in iOS
+* 3. Breaks words to prevent overflow in all browsers
+*/
+
+html {
+ font-size: $font-size-html;
+ -webkit-tap-highlight-color: transparent;
+ /* 1 */
+ -webkit-text-size-adjust: 100%;
+ /* 2 */
+ overflow-wrap: break-word;
+ /* 3 */
+}
+
+body {
+ margin: 0;
+ font-family: $font-family-base;
+font-size: $font-size-base;
+ line-height: $line-height-base;
+ 
+}
+
+/* 1. Switch to border-box model for all elements
+ * 2. Avoid min-width: auto on flex and grid items
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* 1 */
+  /*min-width: 0;*/
+  /* 2 */
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+img {
+    border-style: none;
+  }
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Links
+*/
+
+a {
+color: $gray-600;
+text-decoration: $link-decoration;
+}
+
+a:focus,
+a:hover,
+a:active {
+color: $gray-900;
+text-decoration: $link-decoration-hover;
+}
