@@ -9,3 +9,27 @@
 .display-none {
     display: none;
 }
+
+.display-block {
+    display: block;
+}
+
+.display-grid {
+    display: grid !important;
+}
+
+.size-open {
+    width: 55% !important;
+    max-height: 330px !important;
+    height: auto !important;
+}
+
+.placeholder-opacity {
+    &::placeholder {
+        opacity: 0.6 !important;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
