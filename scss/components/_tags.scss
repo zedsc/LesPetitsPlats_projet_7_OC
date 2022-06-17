@@ -1,0 +1,36 @@
+.tags-section {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px 5px 0px;
+    border-radius: $radius-5px;
+    overflow: hidden;
+    padding: 8px 20px;
+    border-style: none;
+    &__txt {
+        margin-right: 15px;
+        color: $white;
+        font-size: map-get($font-size, "14");
+        letter-spacing: 1px;
+    }
+    &__ingredient {
+        background-color: $color-tertiary;
+    }
+    &__appliance {
+        background-color: $color-quat;
+    }
+    &__ustensil {
+        background-color: $color-quint;
+    }
+}
+
+.tag > .fa-circle-xmark {
+    color: $white;
+    cursor: pointer;
+}
