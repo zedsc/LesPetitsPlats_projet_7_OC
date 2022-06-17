@@ -1,11 +1,9 @@
 class IngredientCard {
+    /**
+     * @param {object} ingredients
+     */
     constructor(ingredients) {
         this._ingredients = ingredients
-    }
-
-
-    get ingredients() {
-        return this._ingredients
     }
 
     createIngredientsDOM() {
@@ -16,7 +14,6 @@ class IngredientCard {
                 <p class="recipe-composant__quantity">${this._ingredients.quantity}</p>
                 <p class="recipe-composant__unit">${this._ingredients.unit}</p>
             </div>
-        
         `
         } else if (this._ingredients.quantity) {
             return `
@@ -24,14 +21,12 @@ class IngredientCard {
                 <p class="recipe-composant__ingredient">${this._ingredients.ingredient} :</p>
                 <p class="recipe-composant__quantity">${this._ingredients.quantity} </p>
             </div>
-        
         `
         } else {
             return `
             <div class="recipe-composant">
                 <p class="recipe-composant__ingredient">${this._ingredients.ingredient}</p>
             </div>
-        
         `
         }
     }

@@ -10,10 +10,6 @@ class RecipeCard {
         this.$recipeGallery = document.getElementById('recipe-gallery')
     }
 
-    get recipe() {
-        return this._recipe
-    }
-
     createRecipeCard() {
         const recipeCard = `
             <div class="recipe-container-img">
@@ -44,22 +40,14 @@ class RecipeCard {
     }
 
     addIngredients() {
-
-        const arrayIngredients = this._recipe.ingredients
-
-        const ingredientsObj = arrayIngredients.map(composant => new IngredientData(composant))
-
-        const ingredientsDefined = ingredientsObj.filter(Boolean)
-
-        const ingredientsCards = ingredientsDefined.map(composant => new IngredientCard(composant))
-
-        const $divIngredients = this.$recipeArticle.querySelector('.recipe-info__ingredients')
+        const ingredientsCards = this._recipe.ingredients
+        .map(composant => new IngredientData(composant))
+        .filter(Boolean)
+        .map(composant => new IngredientCard(composant))
 
         const ingredientsDOM = ingredientsCards.map(composant => composant.createIngredientsDOM()).join("")
-
-        $divIngredients.insertAdjacentHTML('afterbegin', ingredientsDOM)
-
-    
+        
+        const $infoIngredients = this.$recipeArticle.querySelector('.recipe-info__ingredients')
+        $infoIngredients.insertAdjacentHTML('afterbegin', ingredientsDOM)
     }
-
 }
