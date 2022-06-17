@@ -33,51 +33,50 @@
                     </div>
                 </div>
 
+                <!-- Tags -->
+                <div class="tags-section">
+                
+                </div>
+
                 <!-- Comboboxes -->
                 <div class="combobox">
-                  <div class="combobox__ingredient">
-                    <label class="combobox-label__ingredient" for="ingredient">Ingrédients</label>
+                  <div class="combobox-container combobox__ingredient">
+                    <label class="combobox-label__ingredient sr-only" for="input__ingredient">Ingrédients</label>
                     <input 
-                      class="search-ingredient" type="text" id="ingredient" name="ingredient" 
-                      list="ingredient-list" 
-                      placeholder="Rechercher un ingrédient"/>
-                      <svg class="sorter-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      class="combobox-input search-ingredient" type="text" id="input__ingredient" name="input__ingredient" 
+                      placeholder="Ingrédients"/>
+                      <svg id="arrow__ingredient" class="sorter-arrow sorter-arrow__ingredient" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2"/>
                       </svg>
-                    <datalist id="ingredient-list" class="datalist datalist__ingredient">
-                      <option value="oeuf"></option>
-                      <option value="sucre"></option>
-                    </datalist>
+                    <ul id="ingredient-list" class="datalist datalist__ingredient" data-cat="ingredients" aria-expanded="true">
+              
+                    </ul>
                   </div>
 
-                  <div class="combobox__appliance">
-                    <label class="combobox-label__appliance" for="appliance">Appareils</label>
+                  <div class="combobox-container combobox__appliance">
+                    <label class="combobox-label__appliance sr-only" for="input__appliance">Appareils</label>
                     <input 
-                      class="search-appliance" type="text" id="appliance" name="appliance" 
-                      list="appliance-list" 
-                      placeholder="Rechercher un appareil"/>
-                      <svg class="sorter-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2"/>
+                      class="combobox-input search-appliance" type="text" id="input__appliance" name="input__appliance" 
+                      placeholder="Appareils"/>
+                      <svg id="arrow__appliance" class="sorter-arrow sorter-arrow__appliance" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#FFFFFF" stroke-width="2"/>
                       </svg>
-                    <datalist id="appliance-list" class="datalist datalist__appliance">
-                      <option value="casserole"></option>
-                      <option value="four"></option>
-                    </datalist>
+                    <ul id="appliance-list" class="datalist datalist__appliance" data-cat="appliances" aria-expanded="true">
+                      
+                    </ul>
                   </div>
 
-                  <div class="combobox__ustensil">
-                    <label class="combobox-label__ustensil" for="ustensil">Ustensiles</label>
+                  <div class="combobox-container combobox__ustensil">
+                    <label class="combobox-label__ustensil sr-only" for="input__ustensil">Ustensiles</label>
                     <input 
-                      class="search-ustensil" type="text" id="ustensil" name="ustensil" 
-                      list="ustensil-list" 
-                      placeholder="Rechercher un ustensile"/>
-                      <svg class="sorter-arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#E9E9E9" stroke-width="2"/>
+                      class="combobox-input search-ustensil" type="text" id="input__ustensil" name="input__ustensil" 
+                      placeholder="Ustensiles"/>
+                      <svg id="arrow__ustensil" class="sorter-arrow sorter-arrow__ustensil" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.33447L8.00465 8.13311L14.5973 1.33447" stroke="#FFFFFF" stroke-width="2"/>
                       </svg>
-                    <datalist id="ustensil-list" class="datalist datalist__ustensil">
-                      <option value="fouet"></option>
-                      <option value="saladier"></option>
-                    </datalist>
+                    <ul id="ustensil-list" class="datalist datalist__ustensil" data-cat="ustensils" aria-expanded="true">
+                      
+                    </ul>
                   </div>
                 </div>
 
@@ -103,20 +102,26 @@
 
 
       <!-- API -->
-      <script src="/scripts/api/ApiRecipe.js"></script>
 
       <!-- Models -->
       <script src="/scripts/models/IngredientData.js"></script>
       <script src="/scripts/models/RecipeData.js"></script>
-
+      <script src="/scripts/models/IngredientOnlyData.js"></script>
+      
       <!-- Factories -->
 
       <!-- Templates -->
+      <script src="/scripts/templates/ComboBoxMain.js"></script>
+      <script src="/scripts/templates/ComboBoxElt.js"></script>
       <script src="/scripts/templates/IngredientCard.js"></script>
+      <script src="/scripts/templates/ElementList.js"></script>
       <script src="/scripts/templates/RecipeCard.js"></script>
+      <script src="/scripts/templates/Tags.js"></script>
 
       <!-- Utils -->
-      <script src="/scripts/utils/searchBar.js"></script>
+      <script type="module" src="/scripts/utils/research/OnClickEvent.js"></script>
+      <script src="/scripts/utils/research/ResearchFilter.js"></script>
+      <script src="/scripts/utils/ManageArray.js"></script>
 
       <!-- App -->
       <script type="module" src="/scripts/appRecipe.js"></script>
