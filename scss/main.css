@@ -128,8 +128,148 @@ a:active {
   display: none;
 }
 
+.display-block {
+  display: block;
+}
+
+.display-grid {
+  display: grid !important;
+}
+
+.size-open {
+  width: 55% !important;
+  max-height: 330px !important;
+  height: auto !important;
+}
+
+.placeholder-opacity::-moz-placeholder {
+  opacity: 0.6 !important;
+}
+
+.placeholder-opacity:-ms-input-placeholder {
+  opacity: 0.6 !important;
+}
+
+.placeholder-opacity::placeholder {
+  opacity: 0.6 !important;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 .combobox {
   display: flex;
+  margin-top: 15px;
+}
+.combobox-container {
+  border-radius: 5px;
+  position: relative;
+  margin-right: 20px;
+  width: 170px;
+  height: 69px;
+}
+.combobox-input {
+  border-style: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  width: 88%;
+  height: 69px;
+  padding: 15px 20px 15px 18px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.combobox-input:-moz-focusring {
+  outline: none;
+}
+.combobox-input:focus {
+  outline: none;
+}
+.combobox-input::-moz-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+.combobox-input:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+.combobox-input::placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.combobox__ingredient {
+  background-color: #3282F7;
+}
+.combobox .search-ingredient {
+  background-color: #3282F7;
+  border: 1px solid #3282F7;
+  font-family: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.combobox__appliance {
+  background-color: #68D9A4;
+}
+.combobox .search-appliance {
+  background-color: #68D9A4;
+  border: 1px solid #68D9A4;
+  font-family: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.combobox__ustensil {
+  background-color: #ED6454;
+}
+.combobox .search-ustensil {
+  background-color: #ED6454;
+  border: 1px solid #ED6454;
+  font-family: "Lato", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.datalist {
+  display: none;
+  grid-template-columns: repeat(3, 220px);
+  padding-bottom: 20px;
+  margin-top: -10px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  max-height: 330px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.datalist__ingredient {
+  background-color: #3282F7;
+}
+.datalist__appliance {
+  background-color: #68D9A4;
+}
+.datalist__ustensil {
+  background-color: #ED6454;
+}
+.datalist__opt {
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.opt__ingredient:hover {
+  background: #0966ed;
+}
+.opt__appliance:hover {
+  background: #3fcf8b;
+}
+.opt__ustensil:hover {
+  background: #e83a26;
+}
+
+.sorter-arrow {
+  position: absolute;
+  top: 28px;
+  right: 18px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .search-bar__input {
@@ -139,7 +279,18 @@ a:active {
   border-radius: 5px;
   background-color: #e7e7e7;
   padding: 5px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+}
+.search-bar__input::-moz-placeholder {
+  opacity: 0.3;
+}
+.search-bar__input:-ms-input-placeholder {
+  opacity: 0.3;
+}
+.search-bar__input::placeholder {
+  opacity: 0.3;
 }
 .search-bar__input:-moz-focusring {
   outline: 1px solid #c7bebe;
@@ -175,26 +326,26 @@ a:active {
 .recipe-heading {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 1.125rem;
   margin-bottom: 15px;
-  line-height: 1.2;
+  line-height: 1.21;
 }
 .recipe-heading__title {
-  max-width: 76%;
+  max-width: 73%;
 }
 .recipe-heading__timer {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .recipe-info {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 0.75rem;
   overflow: hidden;
   height: 72%;
 }
 .recipe-info__ingredients {
-  width: 48%;
+  width: 49%;
 }
 .recipe-info__description {
   width: 48%;
@@ -203,6 +354,7 @@ a:active {
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 1.2;
+  font-family: Roboto;
 }
 
 .recipe-composant {
@@ -219,6 +371,43 @@ a:active {
 }
 .recipe-composant__unit {
   margin-left: 2px;
+}
+
+.tags-section {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px 5px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 8px 20px;
+  border-style: none;
+}
+.tag__txt {
+  margin-right: 15px;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+.tag__ingredient {
+  background-color: #3282F7;
+}
+.tag__appliance {
+  background-color: #68D9A4;
+}
+.tag__ustensil {
+  background-color: #ED6454;
+}
+
+.tag > .fa-circle-xmark {
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .header {
