@@ -2,12 +2,25 @@
 .combobox {
     display: flex;
     margin-top: 15px;
+    @include x-large-device {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include medium-device {
+        width: 100%;
+        flex-direction: column;
+    }
     &-container {
         border-radius: $radius-5px;
         position: relative;
         margin-right: 20px;
         width: 170px;
         height: 69px;
+        @include medium-device {
+            margin: 0 auto 5px auto;
+            width: 80%;
+        }
     }
     &-input {
         border-style: none;
@@ -73,6 +86,7 @@
 .datalist {
     display: none;
     grid-template-columns: repeat(3, 220px);
+    width: 100%;
     padding-bottom: 20px;
     margin-top: -10px;
     overflow: hidden;
@@ -81,6 +95,10 @@
     max-height: 330px;
     border-bottom-left-radius: $radius-5px;
     border-bottom-right-radius: $radius-5px;
+    @include large-device {
+        display: none;
+        grid-template-columns: none;
+    }
     &__ingredient {
         background-color: $color-tertiary;
     }

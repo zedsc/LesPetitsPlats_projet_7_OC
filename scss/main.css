@@ -141,6 +141,11 @@ a:active {
   max-height: 330px !important;
   height: auto !important;
 }
+@media screen and (max-width: 768px) {
+  .size-open {
+    width: 80% !important;
+  }
+}
 
 .placeholder-opacity::-moz-placeholder {
   opacity: 0.6 !important;
@@ -162,12 +167,31 @@ a:active {
   display: flex;
   margin-top: 15px;
 }
+@media screen and (max-width: 1200px) {
+  .combobox {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .combobox {
+    width: 100%;
+    flex-direction: column;
+  }
+}
 .combobox-container {
   border-radius: 5px;
   position: relative;
   margin-right: 20px;
   width: 170px;
   height: 69px;
+}
+@media screen and (max-width: 768px) {
+  .combobox-container {
+    margin: 0 auto 5px auto;
+    width: 80%;
+  }
 }
 .combobox-input {
   border-style: none;
@@ -229,6 +253,7 @@ a:active {
 .datalist {
   display: none;
   grid-template-columns: repeat(3, 220px);
+  width: 100%;
   padding-bottom: 20px;
   margin-top: -10px;
   overflow: hidden;
@@ -237,6 +262,12 @@ a:active {
   max-height: 330px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+@media screen and (max-width: 992px) {
+  .datalist {
+    display: none;
+    grid-template-columns: none;
+  }
 }
 .datalist__ingredient {
   background-color: #3282F7;
@@ -307,6 +338,12 @@ a:active {
   height: 364px;
   border-radius: 5px;
   overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .recipe-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .recipe-container-img {
@@ -434,6 +471,17 @@ a:active {
   -moz-column-gap: 3%;
        column-gap: 3%;
   row-gap: 45px;
+}
+@media screen and (max-width: 1200px) {
+  .recipe-section {
+    grid-template-columns: repeat(2, 380px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .recipe-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .no-match {

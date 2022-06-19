@@ -22,6 +22,9 @@
     width: 55% !important;
     max-height: 330px !important;
     height: auto !important;
+    @include medium-device {
+        width: 80% !important;
+    }
 }
 
 .placeholder-opacity {

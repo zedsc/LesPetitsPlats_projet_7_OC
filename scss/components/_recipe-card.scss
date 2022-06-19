@@ -3,6 +3,10 @@
     height: 364px;
     border-radius: $radius-5px;
     overflow: hidden;
+    @include large-device {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .recipe-container-img {
