@@ -12,6 +12,12 @@ class OnClickEvents {
         this._category = data.category
     }
 
+    /**
+     * If the combobox is clicked, close all other comboboxes, toggle the display of the list, toggle
+     * the size of the combobox, toggle the opacity of the placeholder, toggle the rotation of the
+     * arrow button, and if the combobox is open, set the placeholder to the placeholder's value, otherwise set
+     * the placeholder to the category's value.
+     */
     openCombobox() {
         const that = this
         this._combobox.addEventListener('click', () => {
@@ -44,6 +50,11 @@ class OnClickEvents {
         })
     }
 
+    /**
+     * It removes the class 'size-open' from the combobox, removes the class 'display-grid' from the
+     * list, removes the class 'placeholder-opacity' from the input, sets the placeholder attribute to
+     * the category's value, and removes the class 'rotate' from the arrow button.
+     */
     closeCombobox() {
         if (this._combobox.classList.contains('size-open')) {
             this._combobox.classList.remove('size-open')

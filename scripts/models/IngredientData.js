@@ -1,4 +1,7 @@
 class IngredientData {
+    /**
+     * @param {object} data
+     */
     constructor(data) {
         this._ingredient = data.ingredient
         this._quantity = data.quantity

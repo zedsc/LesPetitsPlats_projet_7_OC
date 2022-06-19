@@ -1,4 +1,8 @@
 class Tags {
+    /**
+     * @param {string} element
+     * @param {string} list
+     */
     constructor(element, list) {
         this._element = element
         this._list = list
@@ -8,6 +12,9 @@ class Tags {
         this.$btnWrapper.classList.add('tag')
     }
 
+    /**
+     * It creates a tag element, adds a class to it, and then adds an event listener to it.
+     */
     createTag() {
         this.$btnWrapper.classList.add('tag__'+this._list)
         const fullListsOptions = Array.from(document.querySelectorAll('.opt__'+this._list))
@@ -29,6 +36,9 @@ class Tags {
         })
     }
 
+    /**
+     * When the user clicks on the 'x' button, remove the tag from the tag section.
+     */
     removeTag() {
         this.$btnWrapper
         .querySelector('.fa-circle-xmark')

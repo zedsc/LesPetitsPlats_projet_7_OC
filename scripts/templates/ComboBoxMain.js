@@ -6,6 +6,11 @@ class ComboBoxMain {
         this._recipe = recipe
     }
 
+    /**
+     * Each function returns the ingredients or appliances or ustensils from the recipe.
+     * @returns An array.
+     * For ingredients, returns an array of objects.
+     */
     getApplianceOnly() {
         const appliances = this._recipe.appliance
       

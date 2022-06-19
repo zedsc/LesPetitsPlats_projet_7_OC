@@ -10,6 +10,10 @@ class RecipeCard {
         this.$recipeGallery = document.getElementById('recipe-gallery')
     }
 
+   /**
+    * It creates a recipe card and inserts it into the DOM.
+    * @returns The article recipe card is being returned.
+    */
     createRecipeCard() {
         const recipeCard = `
             <div class="recipe-container-img">
@@ -39,6 +43,10 @@ class RecipeCard {
         return this.$recipeArticle
     }
 
+   /**
+    * It takes the ingredients from the recipe object, creates an array of ingredient cards, and then
+    * inserts them into the DOM
+    */
     addIngredients() {
         const ingredientsCards = this._recipe.ingredients
         .map(composant => new IngredientData(composant))

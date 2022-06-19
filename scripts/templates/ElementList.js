@@ -6,6 +6,10 @@ class ElementList {
         this._element = element
     }
 
+    /**
+     * It creates a list item with a class depending if it's an ingredient, appliance or ustensil category.
+     * @returns a string of HTML code.
+     */
     createAppliancesList() {
         return `
         <li class="datalist__opt opt__appliance" data-cat="appliances" tabindex="0">${this._element}</li>

@@ -6,6 +6,10 @@ class ComboBoxElt {
         this._element = element
     }
 
+    /**
+     * Each function creates a list of ingredients/appliances/ustensils and adds them to the DOM.
+     * @returns The listmodel is being returned.
+     */
     addAppliancesList() {
         const $applianceList = document.getElementById('appliance-list')
        

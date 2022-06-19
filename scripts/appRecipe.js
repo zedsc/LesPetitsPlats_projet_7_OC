@@ -8,6 +8,7 @@ class AppRecipe {
 
     async main() {
 
+        // Creating a new array of objects from the recipes array.
         const recipesMapped = recipes.map(recipe => new RecipeData(recipe))
         console.log(recipesMapped)
 
