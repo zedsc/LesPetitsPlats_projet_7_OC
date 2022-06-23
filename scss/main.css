@@ -137,24 +137,21 @@ a:active {
 }
 
 .size-open {
-  width: 55% !important;
-  max-height: 330px !important;
   height: auto !important;
+  max-height: 330px !important;
+  width: 55% !important;
 }
 @media screen and (max-width: 768px) {
   .size-open {
     width: 80% !important;
   }
 }
-
 .placeholder-opacity::-moz-placeholder {
   opacity: 0.6 !important;
 }
-
 .placeholder-opacity:-ms-input-placeholder {
   opacity: 0.6 !important;
 }
-
 .placeholder-opacity::placeholder {
   opacity: 0.6 !important;
 }
@@ -452,8 +449,8 @@ a:active {
 }
 
 .logo {
-  margin: 30px auto;
   display: block;
+  margin: 30px auto;
   width: 250px;
 }
 
@@ -462,14 +459,14 @@ a:active {
 }
 
 .recipe-section {
+  align-content: center;
+  -moz-column-gap: 3%;
+       column-gap: 3%;
   display: grid;
   grid-template-columns: repeat(3, 380px);
   justify-content: center;
-  align-content: center;
-  margin: auto;
   margin-bottom: 50px;
-  -moz-column-gap: 3%;
-       column-gap: 3%;
+  margin: auto;
   row-gap: 45px;
 }
 @media screen and (max-width: 1200px) {

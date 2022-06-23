@@ -19,15 +19,27 @@
 }
 
 .size-open {
-    width: 55% !important;
-    max-height: 330px !important;
     height: auto !important;
+    max-height: 330px !important;
+    width: 55% !important;
     @include medium-device {
         width: 80% !important;
     }
 }
 
 .placeholder-opacity {
+    &::-webkit-input-placeholder {
+        opacity: 0.6 !important;
+    }
+    &::-moz-placeholder {
+        opacity: 0.6 !important;
+    }
+    &:-ms-input-placeholder {
+        opacity: 0.6 !important;
+    }
+    &::-ms-input-placeholder {
+        opacity: 0.6 !important;
+    }
     &::placeholder {
         opacity: 0.6 !important;
     }
