@@ -3,7 +3,6 @@ class ResearchFilter {
         this._recipes = recipes;
         this._arrayInputMain = recipes;
         this._arrayInputMainStored = recipes;
-        this._arrayInputMainPrevious = recipes;
         this._arrayInputCombobox = recipes;
         this._arrayInputComboboxStored = recipes;
         this._arrayInputComboboxPrevious = recipes;
@@ -35,7 +34,6 @@ class ResearchFilter {
 
                     if (tagsValue.length == 1) {
                         that._arrayInputMainStored = that._arrayInputMain;
-                        that._arrayFitleredPrevious = that._arrayInputMain;
                         that._arrayTagged = that._arrayInputMain.filter((recipe)=> {
                             return (
                                 recipe.name.toLowerCase().includes(tagsValue) ||
