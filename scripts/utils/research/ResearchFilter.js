@@ -27,16 +27,11 @@ class ResearchFilter {
             for (let mutation of mutations) {
                 // ADDING TAGS
                 if (mutation.addedNodes.length) {
-                    console.log(mutation, "Added");
-                   
                     const $allTags = document.querySelectorAll('.tag__txt');
-                    console.log($allTags);
 
                     const tagsValue = [];
                     
                     $allTags.forEach(tag => tagsValue.push(tag.textContent));
-
-                    console.log(tagsValue);
 
                     if (tagsValue.length == 1) {
                         that._arrayInputMainStored = that._arrayInputMain;
@@ -77,9 +72,6 @@ class ResearchFilter {
                         that._arrayInputMain = that._arrayInputCombobox;
                     }
 
-                    console.log (that._arrayTagged);
-                    console.log(that._arrayInputMain);
-
                     const cleanGallery = document.querySelectorAll('.recipe-card');
                     cleanGallery.forEach(card => card.remove());
                 
@@ -94,16 +86,11 @@ class ResearchFilter {
                 
                 // REMONVING TAGS
                 } if (mutation.removedNodes.length) {
-                    console.log(mutation, "Removed");
-
                     const $allTags = document.querySelectorAll('.tag__txt');
-                    console.log($allTags);
-
+        
                     const tagsValue = [];
                     
                     $allTags.forEach(tag => tagsValue.push(tag.textContent));
-
-                    console.log(tagsValue);
 
                     if (tagsValue.length == 1) {
                         that._arrayTagged = that._arrayInputMainStored.filter((recipe)=> {
@@ -147,13 +134,6 @@ class ResearchFilter {
                             that.$noMatchMsg.classList.add('display-none');
                         }
                     }
-
-                   
-                    console.log (that._arrayTagged);
-                
-
-                    console.log(that._arrayInputCombobox);
-                    console.log(that._arrayInputMain);
 
                     const cleanGallery = document.querySelectorAll('.recipe-card');
                     cleanGallery.forEach(card => card.remove());
@@ -203,8 +183,6 @@ class ResearchFilter {
                 this._arrayInputMain
                 .map(recipe => new RecipeCard(recipe))
                 .map(recipe => recipe.createRecipeCard());
-            
-                console.log(this._arrayInputMain);
 
                 // Setting the list of ingredients, appliances, and utensils. 
                 this.setIngList();
@@ -224,7 +202,6 @@ class ResearchFilter {
                 cleanGallery.forEach(card => card.remove());
 
                 const $allTags = document.querySelectorAll('.tag__txt');
-                console.log($allTags);
 
                 this._arrayInputMain = $allTags.length === 0 ? this._recipes : this._arrayInputCombobox;
                 const recipesCard = this._arrayInputMain
@@ -311,8 +288,6 @@ class ResearchFilter {
                 const allIngOptions = document.querySelectorAll('.opt__ingredient');
                 allIngOptions.forEach(ing => ing.remove());
 
-                console.log(this._arrayInputCombobox);
-
                 const filteredIng = this._arrayInputCombobox
                 .map(ing => new ComboBoxMain(ing))
                 .map(ing => ing.getIngredientOnly());
@@ -321,9 +296,6 @@ class ResearchFilter {
                 .filter(element => element.includes(searchStringLowerCase))
                 .map(ing => new ComboBoxElt(ing))
                 .map(ing => ing.addIngredientsList());
-            
-                console.log(sortedIng);
-                
 
             } else {
                 const allIngOptions = document.querySelectorAll('.opt__ingredient');
@@ -336,8 +308,6 @@ class ResearchFilter {
                 const sortedListIng = ManageArray.concatSortArray(listIng)
                 .map(ing => new ComboBoxElt(ing))
                 .map(ing => ing.addIngredientsList());
-
-                console.log(sortedListIng);
             }
         });    
     }
@@ -358,8 +328,6 @@ class ResearchFilter {
                 const allAppOptions = document.querySelectorAll('.opt__appliance');
                 allAppOptions.forEach(app => app.remove());
 
-                console.log(this._arrayInputCombobox);
-
                 const filteredApp = this._arrayInputCombobox
                 .map(app => new ComboBoxMain(app))
                 .map(app => app.getApplianceOnly());
@@ -369,9 +337,6 @@ class ResearchFilter {
                 .map(app => new ComboBoxElt(app))
                 .map(app => app.addAppliancesList());
             
-                console.log(sortedApp);
-                
-
             } else {
                 const allAppOptions = document.querySelectorAll('.opt__appliance');
                 allAppOptions.forEach(app => app.remove());
@@ -383,9 +348,6 @@ class ResearchFilter {
                 const sortedListApp = ManageArray.concatSortArray(listApp)
                 .map(app => new ComboBoxElt(app))
                 .map(app => app.addAppliancesList());
-
-                console.log(sortedListApp);
-
             }
         });
     }
@@ -407,8 +369,6 @@ class ResearchFilter {
 
                 const allUstOptions = document.querySelectorAll('.opt__ustensil');
                 allUstOptions.forEach(ust => ust.remove());
-
-                console.log(this._arrayInputCombobox);
 
                 const filteredUst = this._arrayInputCombobox
                 .map(ust => new ComboBoxMain(ust))
@@ -433,5 +393,4 @@ class ResearchFilter {
             }
         });
     }
- 
 }
