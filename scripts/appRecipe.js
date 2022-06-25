@@ -10,10 +10,7 @@ class AppRecipe {
 
         // Creating a new array of objects from the recipes array.
         const recipesMapped = recipes.map(recipe => new RecipeData(recipe))
-        console.log(recipesMapped)
-
         const combobox = recipes.map(recipe => new ComboBoxMain(recipe))
-        console.log(combobox)
         
         // GET, SORT AND RETURN APPLIANCES INSIDE COMBOBOX //
         const getAppliances = combobox.map(recipe => recipe.getApplianceOnly())
@@ -45,7 +42,7 @@ class AppRecipe {
         .map(recipe => recipe.createRecipeCard())
 
         // RESEARCH + TAGS //
-        const searchBar = new ResearchFilter(recipes)
+        const searchBar = new ResearchLoop(recipes)
         searchBar.researchMain()
         searchBar.researchIngredients()
         searchBar.researchAppliances()
