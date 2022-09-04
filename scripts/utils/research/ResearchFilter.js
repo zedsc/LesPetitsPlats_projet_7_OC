@@ -177,7 +177,6 @@ class ResearchFilter {
                 const cleanGallery = document.querySelectorAll('.recipe-card');
                 cleanGallery.forEach(card => card.remove());
             
-        
                 this._arrayInputMain
                 .map(recipe => new RecipeCard(recipe))
                 .map(recipe => recipe.createRecipeCard());
@@ -186,7 +185,6 @@ class ResearchFilter {
                 this.setIngList();
                 this.setAppList();
                 this.setUstList();
-
 
                 if (this.$recipeGallery.firstElementChild === null) {
                     this.$noMatchMsg.classList.remove('display-none');
