@@ -38,6 +38,22 @@
         &:focus {
             outline: none;
         }
+        &::-webkit-input-placeholder {
+            color: $white;
+            opacity: 1;
+        }
+        &::-moz-placeholder {
+            color: $white;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            color: $white;
+            opacity: 1;
+        }
+        &::-ms-input-placeholder {
+            color: $white;
+            opacity: 1;
+        }
         &::placeholder {
             color: $white;
             opacity: 1;

@@ -1,11 +1,11 @@
 .recipe-section {
+    align-content: center;
+    column-gap: 3%;
     display: grid;
     grid-template-columns: repeat(3, 380px);
     justify-content: center;
-    align-content: center;
-    margin: auto;
     margin-bottom: 50px;
-    column-gap: 3%;
+    margin: auto;
     row-gap: 45px;
     @include x-large-device {
         grid-template-columns: repeat(2, 380px);
