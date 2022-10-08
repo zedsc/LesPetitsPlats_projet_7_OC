@@ -18,7 +18,7 @@ Project 7 of the OpenClassrooms [JavaScript React Developer](https://openclassro
 
 #### Search algorithm architecture
 
-![SearchAlgorithm](assets/Algo_filter.png)
+![SearchAlgorithm](assets/Algo_Filter.png)
 
 #### Resources
 
